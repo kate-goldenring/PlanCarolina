@@ -70,7 +70,7 @@ select.onchange = function () {
 
           reader.readAsText(file);
         } else {
-          alert("File not supported!");
+          alert("File not supported! Only upload .txt files!");
         }
       });
     }

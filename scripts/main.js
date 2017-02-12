@@ -13,30 +13,35 @@ select.onchange = function () {
   var selValue = select.options[selIndex].innerHTML;
   console.log(selValue);
 
+  var greenColor = 'hsl(120, 80%, 80%)';
+  var purpleColor = 'hsl(260, 80%, 80%)';
+  var yellowColor = 'hsl(60, 80%, 80%)';
+  var redColor = 'hsl(0, 80%, 70%)';
+
     if (selValue== "CS_BS") {
       for(j =0; j< CS_BS.length; j++){
 
-        addClass(CS_BS[j], 'purple');
+        addClass(CS_BS[j], purpleColor);
       }
     }
  if (selValue== "CS_BA") {
       for(j =0; j< CS_BA.length; j++){
 
-        addClass(CS_BA[j], 'red');
+        addClass(CS_BA[j], redColor);
       }
     }
 
      if (selValue== "LING") {
       for(j =0; j< LING.length; j++){
 
-        addClass(LING[j], 'green');
+        addClass(LING[j], greenColor);
       }
     }
 
      if (selValue== "ECON") {
       for(j =0; j< ECON.length; j++){
 
-        addClass(ECON[j], 'yellow');
+        addClass(ECON[j], yellowColor);
       }
     }
     
@@ -108,8 +113,4 @@ select.onchange = function () {
         }
       });
     });
-
-
-
-
 

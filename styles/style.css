@@ -1,5 +1,5 @@
-.titl{
-     font-size: 60px;
+.title{
+  font-size: 60px;
   text-align: center;
   margin: 0;
   padding: 20px 0;    
@@ -9,14 +9,27 @@
 body{
   background: #7BAFD4;
 }
+
+.options {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  width: 200px;
+}
+
+.options * {
+  margin: 7px;
+}
+
 .large_box{
- 
   display: inline-flex;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-   flex-direction: column;
- 
+  flex-direction: column;
+  text-align: center;
+  font-family: Lato, 'Helvetica Neue'
 }
 .rows{
   display: flex;
@@ -31,6 +44,14 @@ body{
   
   
 }
+
+.titles {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 h2{
   font-size: 40px;
   text-align: center;
@@ -41,18 +62,39 @@ h2{
 }
 
 i{
-color: black;
-margin-left: 250px;
+  color: black;
+  margin-left: 250px;
+  font-style: normal;
+  font-size: 14px;
 }
 
-.course_box{
+i:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.course_box {
   height: 40px;
-width: 400px;
-background: grey;
-
-
-}
-div{
-   border: 1px solid black;
+  width: 400px;
+  background: grey;
+  border: 1px solid hsla(0, 0%, 0%, 0.6);
+  box-sizing: border-box;
+  line-height: 35px;
 }
 
+.semester_box {
+  border: 3px solid #7BAFD4;
+  background: hsla(0, 0%, 100%, 0.9);
+}
+
+@media (max-width: 790px) {
+  .options {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -10px;
+  }
+  .titles {
+    text-align: center;
+  }
+}

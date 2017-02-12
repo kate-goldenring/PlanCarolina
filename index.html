@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
- <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <title>My test page</title>
-     <h1 class = "titl"> Plan Carolina </h1>
-  </head>
-  <body>
+
+<head>
+  <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"> </script>
+ <script type="text/javascript" src="scripts/Sortable.js"> </script>
+  <link href="styles/style.css" rel="stylesheet" type="text/css">
+  <title>My test page</title>
+  <h1 class="titl"> Plan Carolina </h1>
+</head>
+
+<body>
+<button> Add Class </button>
+<input type="file" id="fileInput">
+<br>
+<select name="select" id = 'major'>
+  <option value="value1">SELECT_A_MAJOR</option>
+  <option value="value1">CS_BA</option> 
+  <option value="value2">CS_BS</option>
+  <option value="value3">LING</option>
+  <option value="value3">ECON</option>
+</select>
+<br>
+  <div class="large_box">
     
-        
-  </body>
+    <div class ="rows">
+    <div class="semester_box" id="sem">
+     
+    </div>
+    <div class="semester_box" id="sem">
+     
+    </div>
+</div>
+
+ <div class ="rows">
+    <div class="semester_box" id="sem">
+    
+    </div>
+    <div class="semester_box" id="sem">
+    
+    </div>
+ </div>
+
+  <div class ="rows">
+    <div class="semester_box" id="sem">
+     
+    </div>
+    <div class="semester_box" id="sem">
+    
+    </div>
+  </div>
+   <div class ="rows">
+    <div class="semester_box" id="sem">
+    
+    </div>
+    <div class="semester_box" id="sem">
+     
+    </div>
+    </div>
+
+  </div>
+<script src="scripts/main.js"></script>
+</body>
+
 </html>

@@ -9,3 +9,42 @@
 body{
   background: #7BAFD4;
 }
+.large_box{
+ 
+  display: inline-flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+   flex-direction: column;
+ 
+}
+.rows{
+  display: flex;
+  flex-direction: row;
+  
+}
+.semester_box{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 280px;
+  
+  
+}
+
+i{
+color: black;
+margin-left: 250px;
+}
+
+.course_box{
+  height: 40px;
+width: 400px;
+background: grey;
+
+
+}
+div{
+   border: 1px solid black;
+}
+

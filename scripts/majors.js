@@ -1,0 +1,5 @@
+var CS_BS =  ["COMP 110", "COMP 410", "COMP 411", "COMP 401", "MATH 233"];
+var CS_BA = ["COMP 110", "COMP 410", "COMP 411", "COMP 401", "MATH 233"];
+var LING = ["LING 101", "LING 222", "LING 300"];
+var ECON = ["ECON 101", "ECON 300", "ECON 222"]; 
+var majors =[CS_BS, CS_BA, LING, ECON];

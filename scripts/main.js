@@ -48,10 +48,10 @@ select.onchange = function () {
   }
 
 
-    var CS_BS = ["COMP 110", "COMP 410", "COMP 411", "COMP 401", "MATH 233"];
-    var CS_BA = ["COMP 110", "COMP 410", "COMP 411", "COMP 401", "MATH 233"];
-    var LING = ["LING 101", "LING 222", "LING 300"];
-    var ECON = ["ECON 101", "ECON 300", "ECON 222"];
+    var CS_BS = ["MATH 231", "PHYS 116/188", "MATH 232", "MATH 233", "COMP283/MATH 381", "COMP 401", "COMP 410", "COMP 411",  "COMP 455", "COMP 550", "MATH 547/577", "STOR 435", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426"];
+    var CS_BA = ["MATH 231", "STOR 155/435", "MATH 231", "COMP 283/MATH 381", "STOR 155/435", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP 401", "COMP 41", "COMP 411"];
+    var LING = ["LING 101", "LING ELEC", "LING ELEC", "LING ELEC", "LING 200/520", "LING 201/537", "LING 202/541", "LING 203/540"];
+    var ECON = ["MATH 231/152", "ECON 400", "STOR 155", "ECON 410", "ECON 420", "ECON >= 400", "ECON >= 400", "ECON >= 400", "ECON >= 500", "ECON 101"];
     var majors = [CS_BS, CS_BA, LING, ECON];
 
     window.onload = function () {

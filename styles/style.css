@@ -44,6 +44,11 @@ body{
   
   
 }
+img{
+  position: absolute;
+  height:100px;
+  padding: 20px; 
+}
 
 .titles {
   display: inline-block;
@@ -63,7 +68,8 @@ h2{
 
 i{
   color: black;
-  margin-left: 250px;
+  position: absolute;
+  right: 10px;
   font-style: normal;
   font-size: 14px;
 }
@@ -80,6 +86,7 @@ i:hover {
   border: 1px solid hsla(0, 0%, 0%, 0.6);
   box-sizing: border-box;
   line-height: 35px;
+  position: relative;
 }
 
 .semester_box {

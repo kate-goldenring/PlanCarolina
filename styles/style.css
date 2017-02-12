@@ -44,11 +44,13 @@ body{
   
   
 }
+/* added in line for gitHub 
 #logo{
   position: absolute;
   height: 100px;
   padding: 20px; 
 }
+*/
 
 .titles {
   display: inline-block;

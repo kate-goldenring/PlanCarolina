@@ -44,9 +44,9 @@ body{
   
   
 }
-img{
+#logo{
   position: absolute;
-  height:100px;
+  height: 100px;
   padding: 20px; 
 }
 

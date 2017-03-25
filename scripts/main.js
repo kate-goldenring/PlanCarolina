@@ -1,12 +1,30 @@
 
 //button to add one class
-var addClassButton = document.querySelector('button');
-addClassButton.onclick = function () {
-  var myName = prompt("Enter a class departmet and number like ECON 101");
-  addClass(myName);
-}
-// button to load in a list of classes
 
+function addClassButton() {
+  var myName = prompt("Enter a class departmet and number like ECON 101");
+  if(!myName.length>0){}else{addClass(myName);
+  }
+}
+//add a summer semesters
+function addSummer1() {
+  document.getElementById('sum1').setAttribute("class", "summer_box_clicked");
+var elem = document.getElementById("summerButton1");
+elem.parentNode.removeChild(elem);
+//add a remove summer button
+}
+function addSummer2() {
+  document.getElementById('sum2').setAttribute("class", "summer_box_clicked");
+var elem = document.getElementById("summerButton2");
+elem.parentNode.removeChild(elem);
+}
+function addSummer3() {
+  document.getElementById('sum3').setAttribute("class", "summer_box_clicked");
+var elem = document.getElementById("summerButton3");
+elem.parentNode.removeChild(elem);
+}
+
+// dropdown bar for adding majors
 var select = document.getElementById('major');
 select.onchange = function () {
   var selIndex = select.selectedIndex;
@@ -17,6 +35,8 @@ select.onchange = function () {
   var purpleColor = 'hsl(260, 80%, 80%)';
   var yellowColor = 'hsl(60, 80%, 80%)';
   var redColor = 'hsl(0, 80%, 70%)';
+  var tealColor = 'hsl(166,53%,58%)';
+  
 
     if (selValue== "CS_BS") {
       for(j =0; j< CS_BS.length; j++){
@@ -44,16 +64,24 @@ select.onchange = function () {
         addClass(ECON[j], yellowColor);
       }
     }
+    if (selValue== "BIOL_BS") {
+      for(j =0; j< BIOL_BS.length; j++){
+
+        addClass(BIOL_BS[j], tealColor);
+      }
+    }
     
   }
 
-
+//worksheet arrays
     var CS_BS = ["MATH 231", "PHYS 116/188", "MATH 232", "MATH 233", "COMP283/MATH 381", "COMP 401", "COMP 410", "COMP 411",  "COMP 455", "COMP 550", "MATH 547/577", "STOR 435", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426"];
     var CS_BA = ["MATH 231", "STOR 155/435", "MATH 231", "COMP 283/MATH 381", "STOR 155/435", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP 401", "COMP 41", "COMP 411"];
     var LING = ["LING 101", "LING ELEC", "LING ELEC", "LING ELEC", "LING 200/520", "LING 201/537", "LING 202/541", "LING 203/540"];
     var ECON = ["MATH 231/152", "ECON 400", "STOR 155", "ECON 410", "ECON 420", "ECON >= 400", "ECON >= 400", "ECON >= 400", "ECON >= 500", "ECON 101"];
-    var majors = [CS_BS, CS_BA, LING, ECON];
+    var BIOL_BS = ["MATH 231/241", "BIOL 101&L", "CHEM 101&L", "BIOL 201", "BIOL 202", "BIOL 205", "PHYS 104/114/116/118", "PHYS 105/115/117/119", "CHEM 102&L", "CHEM 241&L", "CHEM 261", "CHEM 262&L", "MATH 232/COMP 110/STOR 155", "BIOL_ORGANISMAL_wLAB", "BIOL>205_wLAB", "BIOL>205_wLAB", "BIOL>400", "BIOL>400", "ALLIED_SCI", "ALLIED_SCI"]
+    var majors = [CS_BS, CS_BA, LING, ECON, BIOL_BS];
 
+//below for reading in files from input and putting classes onto schedule
     window.onload = function () {
       var fileInput = document.getElementById('fileInput');
       var fileDisplayArea = document.getElementById('fileDisplayArea');
@@ -79,13 +107,23 @@ select.onchange = function () {
         }
       });
     }
+    /*
+document.getElementById("fileInput").addEventListener("mouseover", importExplaination);
+function importExplaination(){
+   var newDiv = document.createElement("div");
+   var content = document.createTextNode("Upload a textfile of your classes, 1 class per entered line such as ECON 101");
+   newDiv.appendChild(content);
+   var belowDiv = document.getElementById("major"); 
+    document.body.insertBefore(newDiv, belowDiv); 
+}
+*/
 
-
+//function that creates class div with class name and number as text
 
     function addClass(name, color) {
       var semesters = document.querySelectorAll('.semester_box');
       for (i = 0; i < semesters.length; i++) {
-        if ($(semesters[i]).children().length < 4) {
+        if ($(semesters[i]).children().length < 5) {
           var newClass = document.createElement('DIV');
           var xButton = document.createElement('I');
           xButton.classList.add('js-remove');
@@ -101,6 +139,7 @@ select.onchange = function () {
 
     }
 
+//using Sortable
     var semesters = document.querySelectorAll('.semester_box');
     semesters.forEach(function (sem, index) {
       var sortable = Sortable.create(sem, {
@@ -113,4 +152,17 @@ select.onchange = function () {
         }
       });
     });
-
+    /*
+    var summers = document.querySelectorAll('.summer_box_clicked');
+       summers.forEach(function (sem, index) {
+      var sortable = Sortable.create(sem, {
+        draggable: '.course_box',
+        group: "group",
+        filter: '.js-remove',
+        onFilter: function (evt) {
+			evt.item.parentNode.removeChild(evt.item);
+		
+        }
+      });
+    });
+*/

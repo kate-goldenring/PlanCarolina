@@ -1,4 +1,7 @@
-<!--THIS IS NOT THE ONE WE'RE USING ANYMORE-->
+<?php
+session_start();
+$_SESSION['user'] = 'Hank';
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +17,13 @@
   <img id="logo" src="images/pc_logo.png" style="position: absolute; height: 100px; padding: 20px;">
 <div class="titles">
 <h1 class="title"> Plan Carolina </h1>
+<?php
+if (isset($_SESSION['user'])) {
+  echo("<h1>SESSIONS!!!!</h1>");
+} else {
+  echo("<h1>You're not logged in :(</h1>");
+}
+?>
 <h2> Everybody's Shufflin' </h2>
 </div>
 <div class="options">

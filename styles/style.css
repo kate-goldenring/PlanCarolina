@@ -8,6 +8,26 @@
 }
 body{
   background: #7BAFD4; /*carolina blue*/
+  font-family: Avenir, 'Helvetica Neue', sans-serif;
+}
+
+#toolbar {
+  position: fixed;
+  top: 0px;
+  line-height: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  z-index: 999;
+  background: hsl(200, 80%, 85%);
+  justify-content: space-around;
+  text-align: center;
+}
+
+.toolbar-item {
+  border: 1px solid black;
+  padding: 0px;
+  flex-grow: 1;
 }
 
 .options {
@@ -29,7 +49,7 @@ body{
   transform: translateX(-50%);
   flex-direction: column;
   text-align: center;
-  font-family: Lato, 'Helvetica Neue'
+  font-family: Avenir, Lato, 'Helvetica Neue'
 }
 /*rows are the equivalent of a school year */
 .rows{

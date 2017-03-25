@@ -1,6 +1,27 @@
 <?php
-session_start();
-$_SESSION['user'] = 'Hank';
+// connect to database
+try {
+  $db = new PDO('mysql:host=plancarolina.cqcy2bsld8rk.us-east-1.rds.amazonaws.com;dbname=PlanCarolina', 'PlanCarolina', 'planCarolina110');
+} catch (PDOException $e) {
+?>
+<script>alert("Couldn't connect: <?= $e->getMessage() ?>");</script>
+<?php
+}
+// if not logged in...
+if (!isset($_POST['username'])) {
+  echo('<br><br><h1>please log in :)</h1>');
+} else if (!isset($_SESSION['username'])){ // if trying to log in...
+  session_start();
+  // get the user's row from the database
+  $q = $db->query("SELECT * FROM Users WHERE username='$_POST[username]'"); // dot (.) is how you do string concatenation in php
+  $rows = $q->fetchAll();
+  if ($rows == FALSE) {
+    echo('<br><br><h1>Invalid username :(</h1>');
+  } else {
+  $_SESSION['username'] = $rows[0]['username'];
+    echo('<br><br><h1>logged in! Welcome, ' . $_SESSION['username'] . '</h1>');
+  }
+} 
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,16 +35,24 @@ $_SESSION['user'] = 'Hank';
   <title>Plan Carolina</title>
 </head>
 <body>
-  <img id="logo" src="images/pc_logo.png" style="position: absolute; height: 100px; padding: 20px;">
+<div id="toolbar">
+<div class="toolbar-item">
+<img id="logo" src="images/pc_logo.png" style="height: 50px;">
+</div>
+<div class="toolbar-item">Add Class</div>
+<div class="toolbar-item">Choose File</div>
+<div class="toolbar-item">Select A Major</div>
+<div class="toolbar-item">Login</div>
+</div>
+<form action="index.php" method="post">
+  Username:
+  <input type="text" name="username">
+  Password:
+  <input type="text" name="password"><br>
+  <input type="submit">
+</form>
 <div class="titles">
 <h1 class="title"> Plan Carolina </h1>
-<?php
-if (isset($_SESSION['user'])) {
-  echo("<h1>SESSIONS!!!!</h1>");
-} else {
-  echo("<h1>You're not logged in :(</h1>");
-}
-?>
 <h2> Everybody's Shufflin' </h2>
 </div>
 <div class="options">

@@ -79,6 +79,7 @@ if (!isset($_POST['username'])) {
     </div>
     <div id="sum1">
     <button class = 'sButton' id ="summerButton1" onclick = "addSummer1()"> Add Summer </button>
+    <p id="summer1label"> </p>
     </div>
 </div>
 
@@ -91,6 +92,7 @@ if (!isset($_POST['username'])) {
     </div>
     <div id="sum2">
     <button class = 'sButton' id ="summerButton2" onclick = "addSummer2()"> Add Summer </button>
+    <p id="summer2label"> </p>
     </div>
     
  </div>
@@ -104,6 +106,7 @@ if (!isset($_POST['username'])) {
     </div>
     <div id="sum3">
     <button class = 'sButton' id ="summerButton3" onclick = "addSummer3()"> Add Summer </button>
+    <p id="summer3label"> </p>
     </div>
     
   </div>

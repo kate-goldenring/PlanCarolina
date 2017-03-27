@@ -2,26 +2,53 @@
 //button to add one class
 
 function addClassButton() {
-  var myName = prompt("Enter a class departmet and number like ECON 101");
+  var myName = prompt("Enter a class department and number like ECON 101");
   if(!myName.length>0){}else{addClass(myName);
   }
 }
 //add a summer semesters
 function addSummer1() {
-  document.getElementById('sum1').setAttribute("class", "summer_box_clicked");
-var elem = document.getElementById("summerButton1");
-elem.parentNode.removeChild(elem);
+  document.getElementById('sum1').setAttribute("class", "semester_box");
+  var elem = document.getElementById("summerButton1");
+  elem.parentNode.removeChild(elem);
+  document.getElementById("summer1label").innerHTML = "Summer 1";
+  var sortable = Sortable.create(document.getElementById('sum1'), {
+        draggable: '.course_box',
+        group: "group",
+        filter: '.js-remove',
+        onFilter: function (evt) {
+			evt.item.parentNode.removeChild(evt.item);
+        }
+      });
 //add a remove summer button
 }
 function addSummer2() {
-  document.getElementById('sum2').setAttribute("class", "summer_box_clicked");
-var elem = document.getElementById("summerButton2");
-elem.parentNode.removeChild(elem);
+  document.getElementById('sum2').setAttribute("class", "semester_box");
+  var elem = document.getElementById("summerButton2");
+  elem.parentNode.removeChild(elem);
+  document.getElementById("summer2label").innerHTML = "Summer 2";
+  var sortable = Sortable.create(document.getElementById('sum2'), {
+        draggable: '.course_box',
+        group: "group",
+        filter: '.js-remove',
+        onFilter: function (evt) {
+			evt.item.parentNode.removeChild(evt.item);
+        }
+      });
 }
 function addSummer3() {
-  document.getElementById('sum3').setAttribute("class", "summer_box_clicked");
-var elem = document.getElementById("summerButton3");
-elem.parentNode.removeChild(elem);
+  document.getElementById('sum3').setAttribute("class", "semester_box");
+  var elem = document.getElementById("summerButton3");
+  elem.parentNode.removeChild(elem);
+  document.getElementById("summer3label").innerHTML = "Summer 3";
+  var sortable = Sortable.create(document.getElementById('sum3'), {
+        draggable: '.course_box',
+        group: "group",
+        filter: '.js-remove',
+        onFilter: function (evt) {
+			evt.item.parentNode.removeChild(evt.item);
+        }
+      });
 }
 
 // dropdown bar for adding majors
@@ -122,6 +149,8 @@ function importExplaination(){
 
     function addClass(name, color) {
       var semesters = document.querySelectorAll('.semester_box');
+      // var summers = document.querySelectorAll('.summer_box_clicked');
+      // semesters.add(summers);
       for (i = 0; i < semesters.length; i++) {
         if ($(semesters[i]).children().length < 5) {
           var newClass = document.createElement('DIV');
@@ -142,13 +171,13 @@ function importExplaination(){
 //using Sortable
     var semesters = document.querySelectorAll('.semester_box');
     semesters.forEach(function (sem, index) {
+
       var sortable = Sortable.create(sem, {
         draggable: '.course_box',
         group: "group",
         filter: '.js-remove',
         onFilter: function (evt) {
 			evt.item.parentNode.removeChild(evt.item);
-		
         }
       });
     });

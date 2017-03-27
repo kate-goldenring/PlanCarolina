@@ -168,6 +168,8 @@ function importExplaination(){
 
     }
 
+    
+
 //using Sortable
     var semesters = document.querySelectorAll('.semester_box');
     semesters.forEach(function (sem, index) {

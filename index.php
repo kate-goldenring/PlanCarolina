@@ -39,8 +39,11 @@ if (!isset($_POST['username'])) {
 <div class="toolbar-item">
 <img id="logo" src="images/pc_logo.png" style="height: 50px;">
 </div>
-<div class="toolbar-item">Add Class</div>
-<div class="toolbar-item">Choose File</div>
+<div class="toolbar-item" onclick="addClassButton();">Add Class</div>
+<div class="toolbar-item">
+    Choose File
+    <!--<input type="file" id="fileInput">-->
+</div>
 <div class="toolbar-item">Select A Major</div>
 <div class="toolbar-item">Login</div>
 </div>
@@ -56,7 +59,6 @@ if (!isset($_POST['username'])) {
 <h2> Everybody's Shufflin' </h2>
 </div>
 <div class="options">
-<button class= 'cButton' id ='classButton'  onclick="addClassButton();"> Add Class </button>
 <input type="file" id="fileInput">
 <select name="select" id = 'major'>
   <option value="value0">SELECT_A_MAJOR</option>

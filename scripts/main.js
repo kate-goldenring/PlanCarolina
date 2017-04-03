@@ -7,10 +7,26 @@ function addClassButton() {
   }
 }
 
-//This button shows the login form
+//This button toggles the login form
+
+function toggleLogin() {
+  if (document.getElementById('loginForm').style.opacity === '0') {
+    showLogin()
+  } else {
+    hideLogin()
+  }
+}
+
 function showLogin() {
-  document.getElementById("loginForm").style.display = "block";
-  console.log('hi this is hank')
+  var form = document.getElementById('loginForm')  
+  form.style.opacity = '1'
+  form.style.top = '60px'
+}
+
+function hideLogin() {
+  var form = document.getElementById('loginForm')  
+  form.style.opacity = '0'
+  form.style.top = '0px'
 }
 
 //add a summer semesters

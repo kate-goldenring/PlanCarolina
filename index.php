@@ -45,7 +45,7 @@ if (!isset($_POST['username'])) {
     <!--<input type="file" id="fileInput">-->
 </div>
 <div class="toolbar-item">Select A Major</div>
-<div class="toolbar-item" onclick="showLogin();">Login</div>
+<div class="toolbar-item" id="loginButton" onclick="toggleLogin();">Login</div>
 </div>
   <form id="loginForm" action="index.php" method="post">
     Username:

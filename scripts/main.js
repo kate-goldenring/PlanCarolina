@@ -6,7 +6,6 @@ function addClassButton() {
   if(!myName.length>0){}else{addClass(myName);
   }
 }
-
 //This button shows the login form
 function showLogin() {
   document.getElementById("loginForm").style.display = "block";

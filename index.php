@@ -46,11 +46,11 @@ if (!isset($_POST['username'])) {
 </div>
 <div class="dropdown">
   <div id="myDropdown" class="dropdown-content">
-    <a href="#" onclick='selectMajor("CS_BA");'>CS_BA</a>
-    <a href="#" onclick='selectMajor("CS_BS");'>CS_BS</a>
-    <a href="#" onclick='selectMajor("LING");'>LING</a>
-    <a href="#" onclick='selectMajor("ECON");'>ECON</a>
-    <a href="#" onclick='selectMajor("BIOL_BS");'>BIOL_BS</a>
+    <a href="" onclick='selectMajor("CS_BA");'>CS_BA</a>
+    <a href="" onclick='selectMajor("CS_BS");'>CS_BS</a>
+    <a href="" onclick='selectMajor("LING");'>LING</a>
+    <a href="" onclick='selectMajor("ECON");'>ECON</a>
+    <a href="" onclick='selectMajor("BIOL_BS");'>BIOL_BS</a>
   </div>
 </div>
 <div class="dropbtn" onclick="chooseMajor();">Select A Major</div>

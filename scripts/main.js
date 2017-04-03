@@ -10,6 +10,7 @@ function addClassButton() {
 //This button shows the login form
 function showLogin() {
   document.getElementById("loginForm").style.display = "block";
+  console.log('hi this is hank')
 }
 
 //add a summer semesters

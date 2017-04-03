@@ -7,6 +7,7 @@ function addClassButton() {
   }
 }
 
+<<<<<<< HEAD
 //Shows dropdown for major choice
 function chooseMajor() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -28,9 +29,28 @@ window.onclick = function(event) {
 }
 
 //This button shows the login form
+=======
+//This button toggles the login form
+
+function toggleLogin() {
+  if (document.getElementById('loginForm').style.opacity === '0') {
+    showLogin()
+  } else {
+    hideLogin()
+  }
+}
+
+>>>>>>> 00fe593ea886df3ec6e9f726ff216ac2b08328dc
 function showLogin() {
-  document.getElementById("loginForm").style.display = "block";
-  console.log('hi this is hank')
+  var form = document.getElementById('loginForm')  
+  form.style.opacity = '1'
+  form.style.top = '60px'
+}
+
+function hideLogin() {
+  var form = document.getElementById('loginForm')  
+  form.style.opacity = '0'
+  form.style.top = '0px'
 }
 
 //add a summer semesters

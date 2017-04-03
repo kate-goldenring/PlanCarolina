@@ -12,7 +12,19 @@ body{
 }
 
 form#loginForm {
-  display: none;
+  background: lightblue;
+  border-radius: 4px;
+  z-index: 1;
+  padding: 10px;
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  transition: all 200ms ease-in-out;
+}
+
+#loginButton:hover {
+  cursor: pointer
 }
 
 #toolbar {

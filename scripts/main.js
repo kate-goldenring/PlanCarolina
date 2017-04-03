@@ -6,8 +6,6 @@ function addClassButton() {
   if(!myName.length>0){}else{addClass(myName);
   }
 }
-
-<<<<<<< HEAD
 //Shows dropdown for major choice
 function chooseMajor() {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -29,7 +27,6 @@ window.onclick = function(event) {
 }
 
 //This button shows the login form
-=======
 //This button toggles the login form
 
 function toggleLogin() {
@@ -40,7 +37,6 @@ function toggleLogin() {
   }
 }
 
->>>>>>> 00fe593ea886df3ec6e9f726ff216ac2b08328dc
 function showLogin() {
   var form = document.getElementById('loginForm')  
   form.style.opacity = '1'

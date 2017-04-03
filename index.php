@@ -44,7 +44,16 @@ if (!isset($_POST['username'])) {
     Choose File
     <!--<input type="file" id="fileInput">-->
 </div>
-<div class="toolbar-item">Select A Major</div>
+<div class="dropdown">
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#" onclick='selectMajor("CS_BA");'>CS_BA</a>
+    <a href="#" onclick='selectMajor("CS_BS");'>CS_BS</a>
+    <a href="#" onclick='selectMajor("LING");'>LING</a>
+    <a href="#" onclick='selectMajor("ECON");'>ECON</a>
+    <a href="#" onclick='selectMajor("BIOL_BS");'>BIOL_BS</a>
+  </div>
+</div>
+<div class="dropbtn" onclick="chooseMajor();">Select A Major</div>
 <div class="toolbar-item" onclick="showLogin();">Login</div>
 </div>
   <form id="loginForm" action="index.php" method="post">
@@ -58,7 +67,7 @@ if (!isset($_POST['username'])) {
 <h1 class="title"> Plan Carolina </h1>
 <h2> Everybody's Shufflin' </h2>
 </div>
-<div class="options">
+<!--<div class="options">
 <input type="file" id="fileInput">
 <select name="select" id = 'major'>
   <option value="value0">SELECT_A_MAJOR</option>
@@ -68,7 +77,7 @@ if (!isset($_POST['username'])) {
   <option value="value4">ECON</option>
   <option value ="value5">BIOL_BS</option>
 </select>
-</div>
+</div>-->
 <br>
   <div class="large_box">
     

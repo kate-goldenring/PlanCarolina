@@ -45,15 +45,15 @@ if (!isset($_POST['username'])) {
     <!--<input type="file" id="fileInput">-->
 </div>
 <div class="toolbar-item">Select A Major</div>
-<div class="toolbar-item">Login</div>
+<div class="toolbar-item" onclick="showLogin();">Login</div>
 </div>
-<form action="index.php" method="post">
-  Username:
-  <input type="text" name="username">
-  Password:
-  <input type="text" name="password"><br>
-  <input type="submit">
-</form>
+  <form id="loginForm" action="index.php" method="post">
+    Username:
+    <input type="text" name="username">
+    Password:
+    <input type="text" name="password"><br>
+    <input type="submit">
+  </form>
 <div class="titles">
 <h1 class="title"> Plan Carolina </h1>
 <h2> Everybody's Shufflin' </h2>

@@ -11,6 +11,10 @@ body{
   font-family: Avenir, 'Helvetica Neue', sans-serif;
 }
 
+form#loginForm {
+  display: none;
+}
+
 #toolbar {
   position: fixed;
   top: 0px;

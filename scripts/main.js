@@ -6,6 +6,11 @@ function addClassButton() {
   if(!myName.length>0){}else{addClass(myName);
   }
 }
+
+function showLogin() {
+  document.getElementById("loginForm").style.display = "block";
+}
+
 //add a summer semesters
 function addSummer1() {
   document.getElementById('sum1').setAttribute("class", "semester_box");
@@ -167,6 +172,7 @@ function importExplaination(){
       }
 
     }
+
 
     
 

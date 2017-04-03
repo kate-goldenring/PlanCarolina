@@ -175,15 +175,14 @@ function importExplaination(){
     var LING = ["LING 101", "LING ELEC", "LING ELEC", "LING ELEC", "LING 200/520", "LING 201/537", "LING 202/541", "LING 203/540"];
     var ECON = ["MATH 231/152", "ECON 400", "STOR 155", "ECON 410", "ECON 420", "ECON >= 400", "ECON >= 400", "ECON >= 400", "ECON >= 500", "ECON 101"];
     var BIOL_BS = ["MATH 231/241", "BIOL 101&L", "CHEM 101&L", "BIOL 201", "BIOL 202", "BIOL 205", "PHYS 104/114/116/118", "PHYS 105/115/117/119", "CHEM 102&L", "CHEM 241&L", "CHEM 261", "CHEM 262&L", "MATH 232/COMP 110/STOR 155", "BIOL_ORGANISMAL_wLAB", "BIOL>205_wLAB", "BIOL>205_wLAB", "BIOL>400", "BIOL>400", "ALLIED_SCI", "ALLIED_SCI"]
-    var majors = [CS_BS, CS_BA, LING, ECON, BIOL_BS];
     
+    //This gets called when you select an item in the toolbar list
   function selectMajor(major){
     var greenColor = 'hsl(120, 80%, 80%)';
     var purpleColor = 'hsl(260, 80%, 80%)';
     var yellowColor = 'hsl(60, 80%, 80%)';
     var redColor = 'hsl(0, 80%, 70%)';
     var tealColor = 'hsl(166,53%,58%)';
-    
 
     if (major== "CS_BS") {
        for(j =0; j< CS_BS.length; j++){

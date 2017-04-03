@@ -44,7 +44,6 @@ if (!isset($_POST['username'])) {
     Choose File
     <!--<input type="file" id="fileInput">-->
 </div>
-<<<<<<< .merge_file_ixywGI
 <div class="dropdown">
   <div id="myDropdown" class="dropdown-content">
     <a href="#" onclick='selectMajor("CS_BA");'>CS_BA</a>
@@ -56,10 +55,8 @@ if (!isset($_POST['username'])) {
 </div>
 <div class="dropbtn" onclick="chooseMajor();">Select A Major</div>
 <div class="toolbar-item" onclick="showLogin();">Login</div>
-=======
 <div class="toolbar-item">Select A Major</div>
 <div class="toolbar-item" id="loginButton" onclick="toggleLogin();">Login</div>
->>>>>>> .merge_file_lTu0mj
 </div>
   <form id="loginForm" action="index.php" method="post">
     Username:

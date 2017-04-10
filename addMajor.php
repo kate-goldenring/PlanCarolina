@@ -37,7 +37,7 @@ if (!isset($_POST['username'])) {
 </head>
 <body>
 <div id="toolbar">
-<div class="toolbar-item">
+<div class="toolbar-item" onclick="location.href = './index.php';">
 <img id="logo" src="images/pc_logo.png" style="height: 50px;">
 </div>
 <!--<div class="toolbar-item" onclick="showLogin();">Login</div>-->

@@ -40,22 +40,6 @@ if (!isset($_POST['username'])) {
 <div class="toolbar-item">
 <img id="logo" src="images/pc_logo.png" style="height: 50px;">
 </div>
-<div class="toolbar-item" onclick="addClassButton();">Add Class</div>
-<div class="toolbar-item">
-    Choose File
-    <!--<input type="file" id="fileInput">-->
-</div>
-<div class="dropdown">
-  <div id="myDropdown" class="dropdown-content">
-    <a onclick='selectMajor("CS_BA");'>CS_BA</a>
-    <a onclick='selectMajor("CS_BS");'>CS_BS</a>
-    <a onclick='selectMajor("LING");'>LING</a>
-    <a onclick='selectMajor("ECON");'>ECON</a>
-    <a onclick='selectMajor("BIOL_BS");'>BIOL_BS</a>
-    <!--<a href="./addMajor.php">Add Major</a>-->
-  </div>
-</div>
-<div class="dropbtn" onclick="chooseMajor();">Select A Major</div>
 <!--<div class="toolbar-item" onclick="showLogin();">Login</div>-->
 <div class="toolbar-item" id="loginButton" onclick="toggleLogin();">Login</div>
 </div>
@@ -68,61 +52,12 @@ if (!isset($_POST['username'])) {
   </form>
 <div class="titles">
 <h1 class="title"> Plan Carolina </h1>
-<h2> Everybody's Shufflin' </h2>
+<hr>
+<h2> Add your own Major </h2>
+<h2> Thank you for helping out! </h2>
 </div>
 <br>
-  <div class="large_box">
-    
-    <div class ="rows">
-    <div class="semester_box" id="sem1">
-     <p> Semester 1 </p>
-    </div>
-    <div class="semester_box" id="sem2">
-     <p> Semester 2 </p>
-    </div>
-    <div id="sum1">
-    <button class = 'sButton' id ="summerButton1" onclick = "addSummer1()"> Add Summer </button>
-    <p id="summer1label"> </p>
-    </div>
-</div>
-
- <div class ="rows">
-    <div class="semester_box" id="sem3">
-    <p> Semester 3 </p>
-    </div>
-    <div class="semester_box" id="sem4">
-    <p> Semester 4 </p>
-    </div>
-    <div id="sum2">
-    <button class = 'sButton' id ="summerButton2" onclick = "addSummer2()"> Add Summer </button>
-    <p id="summer2label"> </p>
-    </div>
-    
- </div>
-
-  <div class ="rows">
-    <div class="semester_box" id="sem5">
-     <p> Semester 5 </p>
-    </div>
-    <div class="semester_box" id="sem6">
-    <p> Semester 6 </p>
-    </div>
-    <div id="sum3">
-    <button class = 'sButton' id ="summerButton3" onclick = "addSummer3()"> Add Summer </button>
-    <p id="summer3label"> </p>
-    </div>
-    
-  </div>
-   <div class ="rows">
-    <div class="semester_box" id="sem7">
-    <p> Semester 7 </p>
-    </div>
-    <div class="semester_box" id="sem8">
-     <p> Semester 8 </p>
-    </div>
-    </div>
-
-  </div>
+  
 <script src="scripts/main.js"></script>
 </body>
 

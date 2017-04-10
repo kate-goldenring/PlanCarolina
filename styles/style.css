@@ -1,14 +1,32 @@
-.title{
-  font-size: 60px;
+body {
+  background: #7BAFD4; /*carolina blue*/
+  font-family: Avenir, 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+  font-size: 30px;
   text-align: center;
   margin: 0;
   padding: 20px 0;    
   color: white;
-  text-shadow: 3px 3px 1px black;
+  text-shadow: 1px 1px 1px black;
 }
-body{
-  background: #7BAFD4; /*carolina blue*/
-  font-family: Avenir, 'Helvetica Neue', sans-serif;
+
+i {
+  color: black;
+  position: absolute;
+  right: 10px;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;    
+  color: white;
+  text-shadow: 2px 2px 1px hsla(0, 0%, 0%, 0.6);
 }
 
 form#loginForm {
@@ -60,7 +78,7 @@ form#loginForm {
   margin: 7px;
 }
 
-.large_box{
+.large_box {
   display: inline-flex;
   position: relative;
   left: 50%;
@@ -70,19 +88,20 @@ form#loginForm {
   font-family: Avenir, Lato, 'Helvetica Neue'
 }
 /*rows are the equivalent of a school year */
-.rows{
+.rows {
   display: flex;
   flex-direction: row;
-  
 }
-.semester_box{
+
+.semester_box {
   display: flex;
   flex-direction: column;
   width: 400px;
   height: 280px;
-  
-  
+  border: 3px solid #7BAFD4;
+  background: hsla(0, 0%, 100%, 0.9);
 }
+
 /* added in line for gitHub 
 #logo{
   position: absolute;
@@ -98,22 +117,6 @@ form#loginForm {
   transform: translateX(-50%);
 }
 
-h2{
-  font-size: 40px;
-  text-align: center;
-  margin: 0;
-  padding: 20px 0;    
-  color: white;
-  text-shadow: 1px 1px 1px black;
-}
-
-i{
-  color: black;
-  position: absolute;
-  right: 10px;
-  font-style: normal;
-  font-size: 14px;
-}
 /* i is the delete X icon */
 i:hover {
   color: white;
@@ -128,11 +131,6 @@ i:hover {
   box-sizing: border-box;
   line-height: 35px;
   position: relative;
-}
-
-.semester_box {
-  border: 3px solid #7BAFD4;
-  background: hsla(0, 0%, 100%, 0.9);
 }
 
 .summer_box_clicked {
@@ -183,11 +181,14 @@ i:hover {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
+.show {
+  display:block;
+}
 
 @media (max-width: 790px) {
   .options {
@@ -198,5 +199,20 @@ i:hover {
   }
   .titles {
     text-align: center;
+  }
+}
+
+@media (max-width: 880px) {
+  .rows {
+    display: block;
+  }
+
+  .semester_box {
+    width: 300px;
+    height: 250px;
+  }
+
+  .course_box {
+    width: 300px;
   }
 }

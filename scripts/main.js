@@ -32,10 +32,8 @@ window.onclick = function(event) {
 function toggleLogin() {
   var hidden = document.getElementById('loginForm').style.opacity === "0" || document.getElementById('loginForm').style.opacity === ""
   if (hidden) {
-    console.log('showing login')
     showLogin()
   } else {
-    console.log('hiding login')
     hideLogin()
   }
 }

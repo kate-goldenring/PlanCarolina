@@ -38,7 +38,7 @@ if (!isset($_POST['username'])) {
 <body>
 <div id="toolbar">
 <div class="toolbar-item">
-<img id="logo" src="images/pc_logo.png" style="height: 50px;">
+<img id="logo" src="images/pc_logo.png" style="height: 45px;">
 </div>
 <div class="toolbar-item" onclick="addClassButton();">Add Class</div>
 <div class="toolbar-item">

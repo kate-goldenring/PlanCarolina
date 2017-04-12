@@ -191,6 +191,28 @@ i:hover {
   display:block;
 }
 
+table#addMajorTable {
+  display: block;
+  margin-left: auto;
+  width: 50%;
+  text-align: center;
+  padding: 20px 0;
+}
+
+div#addMajor{
+  display: flex;
+  align-self: center;
+}
+
+/*form#addMajorForm {
+  display: block;
+  float: center;
+  text-align: left;
+  font-size: 20;
+  margin: auto;
+  width: 30%;
+}*/
+
 @media (max-width: 790px) {
   .options {
     text-align: center;
@@ -199,6 +221,9 @@ i:hover {
     top: -10px;
   }
   .titles {
+    text-align: center;
+  }
+  div#addMajor{
     text-align: center;
   }
 }

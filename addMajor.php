@@ -54,10 +54,33 @@ if (!isset($_POST['username'])) {
 <h1 class="title"> Plan Carolina </h1>
 <hr>
 <h2> Add your own Major </h2>
-<h2> Thank you for helping out! </h2>
 </div>
 <br>
+<!--Here's where the form is-->
+<div id="addMajor">
+<table id="addMajorTable">
+<form id="addMajorForm">
+  <tr>
+    <th>Department:</th>
+    <th>Name of Major:</th>
+    <th>Degree:</th>
+  </tr>
+  <tr>
+    <td><input type="text" name="department"></td>
+    <td><input type="text" name="major"></td>
+    <td><input type="text" name="degree"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="submit" onclick="RUNSOMESUBMITFUNCTION"></td>
+    <td></td>
+  </tr>
+</form>
+</table>
+
+</div>
   
+<h2> Thank you for helping out! </h2>
 <script src="scripts/main.js"></script>
 </body>
 

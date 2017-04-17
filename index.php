@@ -41,10 +41,6 @@ if (!isset($_POST['username'])) {
 <img id="logo" src="images/pc_logo.png" style="height: 45px;">
 </div>
 <div class="toolbar-item" onclick="addClassButton();">Add Class</div>
-<div class="toolbar-item">
-    Choose File
-    <!--<input type="file" id="fileInput">-->
-</div>
 <div class="dropdown">
   <div id="myDropdown" class="dropdown-content">
     <a onclick='selectMajor("CS_BA");'>CS_BA</a>
@@ -56,7 +52,6 @@ if (!isset($_POST['username'])) {
   </div>
 </div>
 <div class="dropbtn" onclick="chooseMajor();">Select A Major</div>
-<!--<div class="toolbar-item" onclick="showLogin();">Login</div>-->
 <div class="toolbar-item" id="loginButton" onclick="toggleLogin();">Login</div>
 </div>
   <form id="loginForm" action="index.php" method="post">

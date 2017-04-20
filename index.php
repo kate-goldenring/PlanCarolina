@@ -47,11 +47,14 @@ Select A Major
   <div class="dropdown">
     <div class="dropdown-content" id="myDropdown">
       <a onclick='selectMajor("BIOL_BS");'>Biology BS</a>
-      <a onclick='selectMajor("BUSI");'> Business Administration </a>
+      <a onclick='selectMajor("BUSI");'>Business Administration</a>
+      <a onclick='selectMajor("CHEM_BS");'>Chemistry BS</a>
       <a onclick='selectMajor("CS_BA");'>Computer Science BA</a>
       <a onclick='selectMajor("CS_BS");'>Computer Science BS</a>
       <a onclick='selectMajor("ECON");'>Economics BA</a>
+      <a onclick='selectMajor("EXSS_BA");'>Exercise and Sports Science BA</a>
       <a onclick='selectMajor("LING");'>Linguistics BA</a>
+      <a onclick='selectMajor("POLI");'>Political Science BA</a>
       <a onclick='selectMajor("PR");'>Public Relations BA</a>
       <a onclick='selectMajor("GEN_ED");'>General Education</a>
       <!--<a href="./addMajor.php">Add Major</a>-->

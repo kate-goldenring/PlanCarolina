@@ -138,11 +138,14 @@ function addSummer3() {
       var majorJSON = JSON.parse(response);
       if (major== "BIOL_BS") { loadClasses(majorJSON.BIOL_BS); }
       if (major== "BUSI") { loadClasses(majorJSON.BUSI); }
+      if (major=="CHEM_BS") {loadClasses(majorJSON.CHEM_BS); }
       if (major== "CS_BA"){ loadClasses(majorJSON.COMP_BA); }
       if (major== "CS_BS") { loadClasses(majorJSON.COMP_BS); }
       if (major== "ECON") { loadClasses(majorJSON.ECON_BA); }
+      if (major== "EXSS_BA") {loadClasses(majorJSON.EXSS_BA); }
       if (major== "LING") { loadClasses(majorJSON.LING_BA); }
       if (major== "PR") { loadClasses(majorJSON.MEJO); loadClasses(majorJSON.PR); }
+      if (major== "POLI") { loadClasses(majorJSON.POLI); }
       if (major== "GEN_ED") { loadClasses(majorJSON.GEN_ED); }
     });
   }
@@ -181,21 +184,27 @@ function addSummer3() {
   }
 
   function chooseColor(major){
-    if(major.name == "Computer Science BA"){
+    if(major.name == "Biology BS"){
+      return 'hsl(166, 53%, 58%)';//Teal
+    } else if(major.name == "Business Administration"){ 
+      return 'hsl(210, 100%, 60%)';//Light Blue
+    } else if(major.name == "Chemistry BS"){
+      return 'hsl(88, 100%, 53%)';//Pee green
+    } else if(major.name == "Computer Science BA"){
       return 'hsl(260, 80%, 80%)';//Purple
-    } else if(major.name == "Linguistics BA"){
-      return 'hsl(60, 80%, 80%)';//Yellow
     } else if(major.name == "Computer Science BS"){
       return 'hsl(120, 80%, 80%)';//Green
     } else if(major.name == "Economics BA"){
       return 'hsl(0, 80%, 70%)';//Red
-    } else if(major.name == "Biology BS"){
-      return 'hsl(166, 53%, 58%)';//Teal
-    } else if(major.name == "Business Administration"){ 
-      return 'hsl(210, 100%, 60%)';//Light Blue
+    } else if(major.name == "Exercise and Sports Science BA"){
+      return 'hsl(151, 92%, 58%)';//Greenish Teal
+    } else if(major.name == "Linguistics BA"){
+      return 'hsl(60, 80%, 80%)';//Yellow
     } else if(major.name == "Various MEJO" || major.name == "Public Relations BA"){
       return 'hsl(331, 100%, 83%)';//Light Pink
-    }else{
+    } else if(major.name == "Political Science BA"){
+      return 'hsl(45, 92%, 58%)';//Orange
+    } else{
       return 'hsl(3, 0%, 65%)';//Gray
     }
   }

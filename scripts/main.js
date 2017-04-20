@@ -93,7 +93,7 @@ function addSummer3() {
 }
 
 //function that creates class div with class name and number as text
-
+ var classOverload = "";
     function addClass(name, color) {
       var semesters = document.querySelectorAll('.semester_box');
       for (i = 0; i < semesters.length; i++) {
@@ -109,18 +109,16 @@ function addSummer3() {
           newClass.appendChild(xButton);
           break;
         } else{
-          // if (i == semesters.length - 1){
-          //   alert("Classes were added, but there was not enough space for all of them. Some classes may be missing");
-          //   break;
-          // }
+          if(i == semesters.length - 1){
+            classOverload += name + " , " ;
+          }
         }
       }
 
     }
-//using Sortable
+  //using Sortable
     var semesters = document.querySelectorAll('.semester_box');
     semesters.forEach(function (sem, index) {
-
       var sortable = Sortable.create(sem, {
         draggable: '.course_box',
         group: "group",
@@ -170,6 +168,9 @@ function addSummer3() {
           for(j = 0; j < major.free_electives; j++){
             addClass("Free "+ major.department +" Elective", color);
           }
+        }
+        if (classOverload != ""){
+          alert("There was not enough space for your classes, the following were not added: \n" + classOverload);
         }
   }
 

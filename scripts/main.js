@@ -3,7 +3,10 @@
 
 function addClassButton() {
   var myName = prompt("Enter a class department and number like ECON 101");
-  if(!myName.length>0){}else{addClass(myName);
+  if(myName.length>0){addClass(myName);}
+  if(classOverload != ""){
+    alert("There was not enough space for your class, the following was not added: \n" + classOverload.substring(0, classOverload.length - 3));
+    classOverload = "";
   }
 }
 //Shows dropdown for major choice
@@ -170,7 +173,8 @@ function addSummer3() {
           }
         }
         if (classOverload != ""){
-          alert("There was not enough space for your classes, the following were not added: \n" + classOverload);
+          alert("There was not enough space for your classes, the following were not added: \n" + classOverload.substring(0, classOverload.length - 3));
+          classOverload = "";
         }
   }
 

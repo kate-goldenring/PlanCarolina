@@ -108,6 +108,11 @@ function addSummer3() {
           semesters[i].appendChild(newClass);
           newClass.appendChild(xButton);
           break;
+        } else{
+          // if (i == semesters.length - 1){
+          //   alert("Classes were added, but there was not enough space for all of them. Some classes may be missing");
+          //   break;
+          // }
         }
       }
 
@@ -126,45 +131,74 @@ function addSummer3() {
       });
     });
 
-    //worksheet arrays
-    var CS_BS = ["MATH 231", "PHYS 116/118", "MATH 232", "MATH 233", "COMP283/MATH 381", "COMP 401", "COMP 410", "COMP 411",  "COMP 455", "COMP 550", "MATH 547/577", "STOR 435", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426"];
-    var CS_BA = ["MATH 231", "STOR 155/435", "MATH 231", "COMP 283/MATH 381", "STOR 155/435", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP >= 426", "COMP 401", "COMP 410", "COMP 411"];
-    var LING = ["LING 101", "LING ELEC", "LING ELEC", "LING ELEC", "LING 200/520", "LING 201/537", "LING 202/541", "LING 203/540"];
-    var ECON = ["MATH 231/152", "ECON 400", "STOR 155", "ECON 410", "ECON 420", "ECON >= 400", "ECON >= 400", "ECON >= 400", "ECON >= 500", "ECON 101"];
-    var BIOL_BS = ["MATH 231/241", "BIOL 101&L", "CHEM 101&L", "BIOL 201", "BIOL 202", "BIOL 205", "PHYS 104/114/116/118", "PHYS 105/115/117/119", "CHEM 102&L", "CHEM 241&L", "CHEM 261", "CHEM 262&L", "MATH 232/COMP 110/STOR 155", "BIOL_ORGANISMAL_wLAB", "BIOL>205_wLAB", "BIOL>205_wLAB", "BIOL>400", "BIOL>400", "ALLIED_SCI", "ALLIED_SCI"]
-    
-    //This gets called when you select an item in the toolbar list
+  //This gets called when you select an item in the toolbar list
   function selectMajor(major){
-    var greenColor = 'hsl(120, 80%, 80%)';
-    var purpleColor = 'hsl(260, 80%, 80%)';
-    var yellowColor = 'hsl(60, 80%, 80%)';
-    var redColor = 'hsl(0, 80%, 70%)';
-    var tealColor = 'hsl(166,53%,58%)';
+    loadJSON(function(response) {
+      var majorJSON = JSON.parse(response);
+      if (major == "CS_BA"){ loadClasses(majorJSON.COMP_BA); }
+      if (major== "LING") { loadClasses(majorJSON.LING_BA); }
+      if (major== "CS_BS") { loadClasses(majorJSON.COMP_BS); }
+      if (major== "ECON") { loadClasses(majorJSON.ECON_BA); }
+      if (major== "BIOL_BS") { loadClasses(majorJSON.BIOL_BS); }
+      if (major== "GEN_ED") { loadClasses(majorJSON.GEN_ED); }
+    });
+  }
 
-    if (major== "CS_BS") {
-       for(j =0; j< CS_BS.length; j++){
-          addClass(CS_BS[j], purpleColor);
+  function loadClasses(major){//Checks all the JSON parts and fills them if the category exists
+    var color = chooseColor(major);
+        if (major.absolute_courses != null){
+          for(j = 0; j < major.absolute_courses.length; j++){
+            addClass(major.absolute_courses[j], color);
+          }
         }
-    }
-    if (major== "CS_BA") {
-        for(j =0; j< CS_BA.length; j++){
-          addClass(CS_BA[j], redColor);
+        if (major.choice_courses != null){
+          var k = 0;
+          for(j = 0; j < major.choice_courses.choices.length; j++){
+            var courseToAdd = major.choice_courses.choices[j][0];
+            for(k = 1 ; k < major.choice_courses.choices[j].length; k++){
+              courseToAdd = courseToAdd + " / " + major.choice_courses.choices[j][k];
+            }
+            addClass(courseToAdd, color);
+          }
         }
-    }
-    if (major== "LING") {
-        for(j =0; j< LING.length; j++){
-          addClass(LING[j], greenColor);
+        if (major.range_courses != null){
+          for(j = 0; j < major.range_courses[0].number_required; j++){
+            addClass((major.range_courses[0].department + " " + major.range_courses[0].range), color);
+          }
         }
-    }
-    if (major== "ECON") {
-        for(j =0; j< ECON.length; j++){
-          addClass(ECON[j], yellowColor);
+        if (major.free_electives != null){
+          for(j = 0; j < major.free_electives; j++){
+            addClass("Free "+ major.department +" Elective", color);
+          }
         }
+  }
+
+  function chooseColor(major){
+    if(major.name == "Computer Science BA"){
+      return 'hsl(260, 80%, 80%)';//Purple
+    } else if(major.name == "Linguistics BA"){
+      return 'hsl(60, 80%, 80%)';//Yellow
+    } else if(major.name == "Computer Science BS"){
+      return 'hsl(120, 80%, 80%)';//Green
+    } else if(major.name == "Economics BA"){
+      return 'hsl(0, 80%, 70%)';//Red
+    } else if(major.name == "Biology BS"){
+      return 'hsl(166,53%,58%)';//Teal
+    } else{
+      return 'hsl(3, 0%, 65%)';//Gray
     }
-    if (major== "BIOL_BS") {
-        for(j =0; j< BIOL_BS.length; j++){
-          addClass(BIOL_BS[j], tealColor);
-        }
-    }
-      
-    }
+  }
+
+  //This function grabs the JSON file so we can use it in the addMajor method
+  function loadJSON(callback) {   
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', './majors/majors.json', true);
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(xobj.responseText);
+          }
+    };
+    xobj.send(null);
+ }

@@ -1,0 +1,34 @@
+    "department_degree": {
+    "department": "",
+    "degree": "",
+    "name": "",
+    "absolute_courses": [
+        "MATH 231",
+        "STOR 435"
+    ],
+    "choice_courses": {
+        "number_required": 1,
+        "choices": [
+            [
+            "PHYS 116",
+            "PHYS 118"
+            ],
+            [
+            "COMP 283",
+            "MATH 381"
+            ],
+            [
+            "MATH 547",
+            "MATH 577"
+            ]
+        ]
+        },
+    "range_courses": [
+        {
+        "department": "COMP",
+        "range": ">= 426",
+        "number_required": x
+        }
+    ]
+    "free_electives": x
+    }

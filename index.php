@@ -30,6 +30,7 @@ if (!isset($_POST['username'])) {
   <script type="text/javascript" src="scripts/jquery-3.1.1.min.js"> </script>
   <!sortable added in dragability and deletability of course items >
   <script type="text/javascript" src="scripts/Sortable.js"> </script> 
+  <script type="text/json" src="majors/hankTesting.json"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,16 +42,16 @@ if (!isset($_POST['username'])) {
 <img id="logo" src="images/pc_logo.png" style="height: 45px;">
 </div>
 <div class="toolbar-item" onclick="addClassButton();">Add Class</div>
-
 <div class="toolbar-item dropbtn" onclick="chooseMajor();">
 Select A Major
   <div class="dropdown">
     <div class="dropdown-content" id="myDropdown">
-      <a onclick='selectMajor("CS_BA");'>CS_BA</a>
-      <a onclick='selectMajor("CS_BS");'>CS_BS</a>
-      <a onclick='selectMajor("LING");'>LING</a>
-      <a onclick='selectMajor("ECON");'>ECON</a>
-      <a onclick='selectMajor("BIOL_BS");'>BIOL_BS</a>
+      <a onclick='selectMajor("BIOL_BS");'>Biology BS</a>
+      <a onclick='selectMajor("CS_BA");'>Computer Science BA</a>
+      <a onclick='selectMajor("CS_BS");'>Computer Science BS</a>
+      <a onclick='selectMajor("ECON");'>Economics BA</a>
+      <a onclick='selectMajor("LING");'>Linguistics BA</a>
+      <a onclick='selectMajor("GEN_ED");'>General Education</a>
       <!--<a href="./addMajor.php">Add Major</a>-->
     </div>
   </div>

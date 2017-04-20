@@ -47,10 +47,12 @@ Select A Major
   <div class="dropdown">
     <div class="dropdown-content" id="myDropdown">
       <a onclick='selectMajor("BIOL_BS");'>Biology BS</a>
+      <a onclick='selectMajor("BUSI");'> Business Administration </a>
       <a onclick='selectMajor("CS_BA");'>Computer Science BA</a>
       <a onclick='selectMajor("CS_BS");'>Computer Science BS</a>
       <a onclick='selectMajor("ECON");'>Economics BA</a>
       <a onclick='selectMajor("LING");'>Linguistics BA</a>
+      <a onclick='selectMajor("PR");'>Public Relations BA</a>
       <a onclick='selectMajor("GEN_ED");'>General Education</a>
       <!--<a href="./addMajor.php">Add Major</a>-->
     </div>
@@ -69,9 +71,9 @@ Select A Major
 <h1 class="title"> Plan Carolina </h1>
 <h2> Everybody's Shufflin' </h2>
 </div>
+
 <br>
   <div class="large_box">
-    
     <div class ="rows">
     <div class="semester_box" id="sem1">
      <p> Semester 1 </p>
@@ -83,7 +85,7 @@ Select A Major
     <button class = 'sButton' id ="summerButton1" onclick = "addSummer1()"> Add Summer </button>
     <p id="summer1label"> </p>
     </div>
-</div>
+  </div>
 
  <div class ="rows">
     <div class="semester_box" id="sem3">
@@ -96,7 +98,6 @@ Select A Major
     <button class = 'sButton' id ="summerButton2" onclick = "addSummer2()"> Add Summer </button>
     <p id="summer2label"> </p>
     </div>
-    
  </div>
 
   <div class ="rows">
@@ -109,7 +110,7 @@ Select A Major
     <div id="sum3">
     <button class = 'sButton' id ="summerButton3" onclick = "addSummer3()"> Add Summer </button>
     <p id="summer3label"> </p>
-    </div>
+  </div>
     
   </div>
    <div class ="rows">
@@ -119,7 +120,7 @@ Select A Major
     <div class="semester_box" id="sem8">
      <p> Semester 8 </p>
     </div>
-    </div>
+  </div>
 
   </div>
   <br>

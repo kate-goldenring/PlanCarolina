@@ -136,11 +136,13 @@ function addSummer3() {
   function selectMajor(major){
     loadJSON(function(response) {
       var majorJSON = JSON.parse(response);
-      if (major == "CS_BA"){ loadClasses(majorJSON.COMP_BA); }
-      if (major== "LING") { loadClasses(majorJSON.LING_BA); }
+      if (major== "BIOL_BS") { loadClasses(majorJSON.BIOL_BS); }
+      if (major== "BUSI") { loadClasses(majorJSON.BUSI); }
+      if (major== "CS_BA"){ loadClasses(majorJSON.COMP_BA); }
       if (major== "CS_BS") { loadClasses(majorJSON.COMP_BS); }
       if (major== "ECON") { loadClasses(majorJSON.ECON_BA); }
-      if (major== "BIOL_BS") { loadClasses(majorJSON.BIOL_BS); }
+      if (major== "LING") { loadClasses(majorJSON.LING_BA); }
+      if (major== "PR") { loadClasses(majorJSON.MEJO); loadClasses(majorJSON.PR); }
       if (major== "GEN_ED") { loadClasses(majorJSON.GEN_ED); }
     });
   }
@@ -188,8 +190,12 @@ function addSummer3() {
     } else if(major.name == "Economics BA"){
       return 'hsl(0, 80%, 70%)';//Red
     } else if(major.name == "Biology BS"){
-      return 'hsl(166,53%,58%)';//Teal
-    } else{
+      return 'hsl(166, 53%, 58%)';//Teal
+    } else if(major.name == "Business Administration"){ 
+      return 'hsl(210, 100%, 60%)';//Light Blue
+    } else if(major.name == "Various MEJO" || major.name == "Public Relations BA"){
+      return 'hsl(331, 100%, 83%)';//Light Pink
+    }else{
       return 'hsl(3, 0%, 65%)';//Gray
     }
   }

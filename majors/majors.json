@@ -118,7 +118,7 @@
         }
     ]
   },
-  
+
   "BIOL_BS": {
     "department": "BIOL",
     "degree": "BS",
@@ -141,5 +141,65 @@
         "number_required": 2
         }
     ]
+  },
+  "BUSI": {
+    "department": "BUSI",
+    "degree": "BSBA",
+    "name": "Business Administration",
+    "absolute_courses": ["ECON 101","ECON 410","BUSI 401","BUSI 403","BUSI 404","BUSI 405","BUSI 406","BUSI 407","BUSI 408","BUSI 410","BUSI 411","BUSI 412","STOR 155"],
+    "choice_courses": {
+        "number_required": 1,
+        "choices": [
+            ["MATH 152","MATH 231", "MATH 232", "STOR 113"],
+            ["BUSI 101", "BUSI 107"]
+        ]
+        },
+    "range_courses": [
+        {
+        "department": "ANY",
+        "range": "NON-BUSI",
+        "number_required": 5
+        }
+    ],
+    "free_electives": 6
+    },
+
+  "MEJO": {
+    "_comment": "MEJO majors vary, but the core does not. Add MEJO and separate major",
+    "department": "MEJO",
+    "degree": "BA",
+    "name": "Various MEJO",
+    "absolute_courses": ["MEJO 137","MEJO 141","MEJO 153","MEJO 221","MEJO 279","MEJO 341"],
+    "choice_courses": {
+        "number_required": 1,
+        "choices": [
+            ["POLI 101","POLI 130","POLI 150","POLI 202","POLI 203"],
+            ["EE Credit","MEJO 393"],
+            ["GL Credit","MEJO 446"],
+            ["US Credit","MEJO 441"]
+        ]
+        },
+    "range_courses": [
+        {
+        "department": "MEJO",
+        "range": ">=137, <=692H",
+        "number_required": 2
+        }
+    ],
+    "free_electives": 1
+    },
+  "PR": {
+    "department": "MEJO",
+    "degree": "BA",
+    "name": "Public Relations BA",
+    "absolute_courses": ["MEJO 232", "MEJO 431", "MEJO 434"],
+    "range_courses": [
+        {
+        "department": "",
+        "range": "72 hours of NON-MEJO credit",
+        "number_required": 1
+        }
+    ],
+    "free_electives": 1
   }
 }

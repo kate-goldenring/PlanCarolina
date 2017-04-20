@@ -14,7 +14,6 @@ function chooseMajor() {
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -25,8 +24,6 @@ window.onclick = function(event) {
     }
   }
 }
-
-//This button shows the login form
 //This button toggles the login form
 
 function toggleLogin() {
@@ -95,51 +92,10 @@ function addSummer3() {
       });
 }
 
-
-//below for reading in files from input and putting classes onto schedule
-    // window.onload = function () {
-    //   var fileInput = document.getElementById('fileInput');
-    //   var fileDisplayArea = document.getElementById('fileDisplayArea');
-
-    //   fileInput.addEventListener('change', function (e) {
-    //     // Put the rest of the demo code here.
-    //     var file = fileInput.files[0];
-    //     var textType = /text.*/;
-    //     if (file.type.match(textType)) {
-    //       var reader = new FileReader();
-
-    //       reader.onload = function (e) {
-    //         var contents = reader.result;
-    //         var lines = contents.split(/[\r\n]+/g);
-    //         for (var i = 0; i < lines.length; i++) {
-    //           addClass(lines[i], 'orange');
-    //         }
-    //       }
-
-    //       reader.readAsText(file);
-    //     } else {
-    //       alert("File not supported! Only upload .txt files!");
-    //     }
-    //   });
-    // }
-    /*
-
-document.getElementById("fileInput").addEventListener("mouseover", importExplaination);
-function importExplaination(){
-   var newDiv = document.createElement("div");
-   var content = document.createTextNode("Upload a textfile of your classes, 1 class per entered line such as ECON 101");
-   newDiv.appendChild(content);
-   var belowDiv = document.getElementById("major"); 
-    document.body.insertBefore(newDiv, belowDiv); 
-}
-*/
-
 //function that creates class div with class name and number as text
 
     function addClass(name, color) {
       var semesters = document.querySelectorAll('.semester_box');
-      // var summers = document.querySelectorAll('.summer_box_clicked');
-      // semesters.add(summers);
       for (i = 0; i < semesters.length; i++) {
         if ($(semesters[i]).children().length < 5) {
           var newClass = document.createElement('DIV');
@@ -212,17 +168,3 @@ function importExplaination(){
     }
       
     }
-    /*
-    var summers = document.querySelectorAll('.summer_box_clicked');
-       summers.forEach(function (sem, index) {
-      var sortable = Sortable.create(sem, {
-        draggable: '.course_box',
-        group: "group",
-        filter: '.js-remove',
-        onFilter: function (evt) {
-			evt.item.parentNode.removeChild(evt.item);
-		
-        }
-      });
-    });
-*/

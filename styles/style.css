@@ -3,6 +3,11 @@ body {
   font-family: Avenir, 'Helvetica Neue', sans-serif;
 }
 
+button{
+  font-size: 16px;
+  font-family: Avenir, 'Helvetica Neue', sans-serif;
+}
+
 h2 {
   font-size: 30px;
   text-align: center;
@@ -197,14 +202,11 @@ div#addMajor{
   align-self: center;
 }
 
-/*form#addMajorForm {
+.saveButtonDiv{
   display: block;
-  float: center;
-  text-align: left;
-  font-size: 20;
-  margin: auto;
-  width: 30%;
-}*/
+  text-align: center;
+  padding: 10px;
+}
 
 @media (max-width: 790px) {
   .options {

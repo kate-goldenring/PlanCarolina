@@ -121,6 +121,10 @@ Select A Major
     </div>
 
   </div>
+  <br>
+  <div class="saveButtonDiv">
+    <button class="saveButton" id="saveButton" onclick = "saveSchedule()"> Save Schedule </button>
+  </div>
 <script src="scripts/main.js"></script>
 </body>
 

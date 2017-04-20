@@ -41,17 +41,20 @@ if (!isset($_POST['username'])) {
 <img id="logo" src="images/pc_logo.png" style="height: 45px;">
 </div>
 <div class="toolbar-item" onclick="addClassButton();">Add Class</div>
-<div class="dropdown">
-  <div id="myDropdown" class="dropdown-content">
-    <a onclick='selectMajor("CS_BA");'>CS_BA</a>
-    <a onclick='selectMajor("CS_BS");'>CS_BS</a>
-    <a onclick='selectMajor("LING");'>LING</a>
-    <a onclick='selectMajor("ECON");'>ECON</a>
-    <a onclick='selectMajor("BIOL_BS");'>BIOL_BS</a>
-    <!--<a href="./addMajor.php">Add Major</a>-->
+
+<div class="toolbar-item dropbtn" onclick="chooseMajor();">
+Select A Major
+  <div class="dropdown">
+    <div class="dropdown-content" id="myDropdown">
+      <a onclick='selectMajor("CS_BA");'>CS_BA</a>
+      <a onclick='selectMajor("CS_BS");'>CS_BS</a>
+      <a onclick='selectMajor("LING");'>LING</a>
+      <a onclick='selectMajor("ECON");'>ECON</a>
+      <a onclick='selectMajor("BIOL_BS");'>BIOL_BS</a>
+      <!--<a href="./addMajor.php">Add Major</a>-->
+    </div>
   </div>
 </div>
-<div class="dropbtn" onclick="chooseMajor();">Select A Major</div>
 <div class="toolbar-item" id="loginButton" onclick="toggleLogin();">Login</div>
 </div>
   <form id="loginForm" action="index.php" method="post">

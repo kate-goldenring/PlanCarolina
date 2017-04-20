@@ -147,13 +147,11 @@ i:hover {
 .dropbtn {
     cursor: pointer;
     border: 1px solid black;
-    padding: 0px;
     flex-grow: 1;
 }
 
 .dropdown {
     position: relative;
-    padding-top: 45px;
     display: flex;
 }
 
@@ -163,7 +161,6 @@ i:hover {
     position: absolute;
     text-align: center;
     background-color: #f9f9f9;
-    width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -183,9 +180,8 @@ i:hover {
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display: flex;
-  flex-grow: 1;
   flex-flow: column wrap;
-  justify-content: space-around;
+  width: 100%;
 }
 
 table#addMajorTable {

@@ -215,7 +215,7 @@
     "department": "MEJO",
     "degree": "BA",
     "name": "Various MEJO",
-    "absolute_courses": ["MEJO 137","MEJO 141","MEJO 153","MEJO 221","MEJO 279","MEJO 341"],
+    "absolute_courses": ["MEJO 121","MEJO 137","MEJO 141","MEJO 153","MEJO 341","MEJO 379"],
     "choice_courses": {
         "number_required": 1,
         "choices": [
@@ -239,7 +239,7 @@
     "department": "MEJO",
     "degree": "BA",
     "name": "Public Relations BA",
-    "absolute_courses": ["MEJO 232", "MEJO 431", "MEJO 434"],
+    "absolute_courses": ["MEJO 332", "MEJO 531", "MEJO 634"],
     "range_courses": [
         {
         "department": "",

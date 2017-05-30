@@ -40,6 +40,9 @@ if (!isset($_POST['username'])) {
 <div class="toolbar-item" onclick="location.href = './index.php';">
 <img id="logo" src="images/pc_logo.png" style="height: 50px;">
 </div>
+<div class="toolbar-item" onclick="location.href = './index.php';">
+Start Planning
+</div>
 <!--<div class="toolbar-item" onclick="showLogin();">Login</div>-->
 <div class="toolbar-item" id="loginButton" onclick="toggleLogin();">Login</div>
 </div>
@@ -53,24 +56,43 @@ if (!isset($_POST['username'])) {
 <div class="titles">
 <h1 class="title"> Plan Carolina </h1>
 <hr>
-<h2> Add your own Major </h2>
+
 </div>
 <br>
 <!--Here's where the form is-->
 <div id="about">
-<p> At UNC there are endless opportunities; however, those endless options can be overwhelming especially with only
-    four years to seize them. We found ourselves rewriting our four-year plans over and over again on pieces of paper each time 
-    we took that art history or philosophy class and instantly wanted to add another major or minor. Could we fit it in? What about study abroad?
-    The erasing and reoutlining became onerous, especially with the confusing UNC academic worksheets. Out of this frustration grew PlanCarolina, a tool 
-    that we hope will help you explore your indecisiveness efficiently. We are a team of three Juniors studying Computer Science, Linguistics, Economics, Math, and... who knows? 
-    We hope PlanCarolina will help you plan out your four years at this school of national champions! 
-    Cheers to planning!
-    - Kate, Hank, and Brooks
-</p>
-<img id="kate" src="images/GoldenringPic.png" style="height: 43px;">
+    <div id="aboutText">
+        <p id = "aboutPara"> At UNC there are endless opportunities; however, those endless options can be overwhelming especially with only
+            four years to seize them. We found ourselves rewriting our four-year plans over and over again on pieces of paper each time 
+            we took that art history or philosophy class and instantly wanted to add another major or minor. Could we fit it in? What about study abroad?
+            The erasing and reoutlining became onerous, especially with the confusing UNC academic worksheets. Out of this frustration grew PlanCarolina, a tool 
+            that we hope will help you explore your indecisiveness efficiently. We are a team of three Juniors studying Computer Science, Linguistics, Economics, Math, and... who knows? 
+            We hope PlanCarolina will help you plan out your four years at this school of national champions! 
+            Cheers to planning!
+              Kate, Hank, and Brooks
+        </p>
+    </div>
+    <div id= "profiles">
+        <div class = "gallery" id = "kate">
+            <img src="images/kate.jpeg" width = "300" height = "200">
+            <div class = "overlay">
+                <div class ="overText"> Kate Goldenring </div>
+            </div>
+        </div>
+        <div class = "gallery" id ="hank">
+            <img src="images/hank.jpg" width = "300" height = "200">
+            <div class = "overlay">
+                <div class ="overText"> Hank Hester </div>
+            </div>
+        </div>
+        <div class = "gallery" id = "brooks">
+            <img src="images/brooks.jpg" width = "300" height = "200">
+            <div class = "overlay">
+                <div class ="overText"> Brooks Townsend </div>
+            </div>
+        </div> 
+    </div>
 </div>
-  
-<h2> Contact us at ???</h2>
 <script src="scripts/main.js"></script>
 </body>
 

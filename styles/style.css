@@ -116,6 +116,13 @@ form#loginForm {
 }
 */
 
+#id{
+  position: absolute;
+  height: 100px;
+  padding: 20px; 
+}
+
+
 .titles {
   display: inline-block;
   position: relative;
